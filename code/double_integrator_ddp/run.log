@@ -1,0 +1,25 @@
+[警告: 名称不存在或不是目录: C:\Users\18545\Desktop\FDDP\F-DDP优化时间] 
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+Iteration 1: totalCost = 6.687287, alpha = 1.0000, lambda = 0.001000
+Iteration 2: totalCost = 6.278380, alpha = 1.0000, lambda = 0.000100
+Iteration 3: totalCost = 6.275950, alpha = 1.0000, lambda = 0.000010
+Iteration 4: totalCost = 6.275937, alpha = 1.0000, lambda = 0.000001
+Iteration 5: Gradient norm 1.079e-07 is below the threshold 1.000e-06. Stopping.
+
+========== DDP 求解结果汇总 ==========
+退出状态：stationary
+外层迭代索引：5；接受更新次数：4
+终端位置：[29.996926, 29.996926] m
+终端速度：[0.026347, 0.026347] m/s
+终端位置误差：0.004347912 m
+终端速度误差：0.037259784 m/s
+总代价：6.27593695651
+求解时长：0.227446 s（不含绘图及本汇总打印）
+最大速度：5.045755 m/s；超限量：0.045755 m/s
+最大加速度：1.861238 m/s^2；超限量：0.000000 m/s^2
+最终控制梯度无穷范数：1.079e-07
+=====================================
+
