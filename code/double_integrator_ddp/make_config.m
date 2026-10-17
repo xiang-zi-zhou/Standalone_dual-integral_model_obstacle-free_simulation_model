@@ -35,4 +35,14 @@ function cfg = make_config()
     cfg.solver.tol_cost = 1e-6;
     cfg.solver.tol_grad = 1e-6; 
 
+    % a*初始化世界
+    cfg.world.x = 30;
+    cfg.world.y = 30;
+    cfg.world.resolution = 4; % 每米4个格子，即每格0.25米
+
+    % 障碍物
+    cfg.world.obstacle1 = [12, 8; 18, 20]; % 矩形障碍物，左下角坐标为(12, 8)，右上角坐标为(18, 20)
+    cfg.world.obstacle2 = [15, 10; 23, 18]; % 原始正方形：[15,23]×[10,18]，绕世界原点逆时针旋转9°
+    cfg.world.obstacle3 = [15, 14, 3]; % 圆形障碍物，圆心为(15, 14)，半径为3米 
+
 end
