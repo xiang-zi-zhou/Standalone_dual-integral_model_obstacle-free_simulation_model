@@ -4,7 +4,7 @@ function figs = plot_results(sol, cfg)
 %   必需字段：sol.X (4×(N+1))、sol.U (2×N)。
 %   可选字段：sol.history.J、sol.parts；缺少时对应面板显示说明。
 %   兼容当前 solve_ddp 的输出，不依赖 sol.metrics 或 sol.J。
-%   figs.trajectory 和 figs.optimization 为两个窗口的句柄。
+%   返回 trajectory、optimization、avoidance 三个窗口句柄。
 
     X = sol.X;
     U = sol.U;
@@ -23,18 +23,29 @@ function figs = plot_results(sol, cfg)
     accel = sqrt(sum(U.^2, 1));
     goal = cfg.task.x_goal(:);
 
-    figs.trajectory = figure('Name', '双积分：轨迹与控制', 'Color', 'w');
+    figs.trajectory = figure('Name', '双积分：轨迹与控制', 'Color', 'w', ...
+        'Position', [50,50,1200,800]);
     subplot(2, 2, 1);
-    plot(X(1, :), X(2, :), 'b-', 'LineWidth', 1.5);
     hold on;
-    plot(X(1, 1), X(2, 1), 'go', 'MarkerFaceColor', 'g');
-    plot(X(1, end), X(2, end), 'bs', 'MarkerFaceColor', 'b');
-    plot(goal(1), goal(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
+    obs = cfg.task.obs(:);
+    theta = linspace(0, 2*pi, 200);
+    circle = [cos(theta); sin(theta)];
+    boundary = obs(1:2) + obs(3)*circle;
+    safe = obs(1:2) + (obs(3)+cfg.task.obs_safe)*circle;
+    hObs = fill(boundary(1,:), boundary(2,:), [0.35 0.35 0.35], ...
+        'EdgeColor', 'k');
+    hSafe = plot(safe(1,:), safe(2,:), '--', 'Color', [0.9 0.45 0], 'LineWidth', 1.2);
+    hPath = plot(X(1, :), X(2, :), 'b-', 'LineWidth', 1.5);
+    hStart = plot(X(1, 1), X(2, 1), 'go', 'MarkerFaceColor', 'g');
+    hEnd = plot(X(1, end), X(2, end), 'bs', 'MarkerFaceColor', 'b');
+    hGoal = plot(goal(1), goal(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
     axis equal; grid on;
     xlabel('p_x (m)'); ylabel('p_y (m)');
     title(sprintf('平面轨迹：终点位置误差 %.3g m', ...
         norm(X(1:2, end) - goal(1:2))));
-    legend('优化轨迹', '起点', '实际终点', '目标位置', 'Location', 'best');
+    legend([hPath,hStart,hEnd,hGoal,hObs,hSafe], ...
+        {'优化轨迹', '起点', '实际终点', '目标位置', '原始障碍物', '安全边界'}, ...
+        'Location', 'best');
 
     subplot(2, 2, 2);
     plot(tx, X(3, :), tx, X(4, :), 'LineWidth', 1.2);
@@ -67,7 +78,8 @@ function figs = plot_results(sol, cfg)
     title('软约束超限：罚函数不保证严格满足上限');
     legend('速度超限 (m/s)', '加速度超限 (m/s^2)', 'Location', 'best');
 
-    figs.optimization = figure('Name', '双积分：优化与代价', 'Color', 'w');
+    figs.optimization = figure('Name', '双积分：优化与代价', 'Color', 'w', ...
+        'Position', [100,100,1200,520]);
     subplot(1, 2, 1);
     % 约定 J(1) 是初始代价，之后每项是一次接受更新后的代价。
     if isfield(sol, 'history') && isfield(sol.history, 'J') ...
@@ -86,7 +98,7 @@ function figs = plot_results(sol, cfg)
 
     subplot(1, 2, 2);
     names = {'control', 'speed_penalty', 'accel_penalty', ...
-        'terminal_position', 'terminal_velocity'};
+        'terminal_position', 'terminal_velocity', 'obstacle_penalty', 'terminal_obstacle'};
     if isfield(sol, 'parts') && isstruct(sol.parts) ...
             && all(isfield(sol.parts, names))
         values = zeros(1, numel(names));
@@ -96,8 +108,9 @@ function figs = plot_results(sol, cfg)
             values(i) = sum(component(:));
         end
         bar(values);
-        set(gca, 'XTick', 1:5, 'XTickLabel', ...
-            {'控制能量', '速度罚项', '加速度罚项', '终端位置', '终端速度'});
+        set(gca, 'XTick', 1:numel(names), 'XTickLabel', ...
+            {'控制能量', '速度罚项', '加速度罚项', '终端位置', '终端速度', '过程避障', '终端避障'});
+        xtickangle(30);
         grid on; ylabel('代价');
         title(sprintf('最终代价组成：总和 %.6g', sum(values)));
     else
@@ -105,4 +118,18 @@ function figs = plot_results(sol, cfg)
         text(0.5, 0.5, '尚未提供完整的 sol.parts 代价分项', ...
             'Units', 'normalized', 'HorizontalAlignment', 'center');
     end
+
+    avoidance = obstacle_metrics(X,U,cfg);
+    figs.avoidance = figure('Name', '双积分：障碍距离', 'Color', 'w');
+    plot(tx, avoidance.node_clearance, 'b-', 'LineWidth', 1.3);
+    hold on;
+    plot(tx(1:end-1)+dt/2, avoidance.interval_clearance, 'm.', 'MarkerSize', 8);
+    yline(cfg.task.obs_safe, '--', 'Color', [0.9 0.45 0], 'LineWidth', 1.2);
+    yline(0, 'k--');
+    grid on; xlim([0,tx(end)]);
+    xlabel('时间 (s)'); ylabel('中心到原始障碍边界的净距离 (m)');
+    title(sprintf('区间内最小净距离 %.4f m；最小安全余量 %.4f m', ...
+        avoidance.min_obstacle_clearance, avoidance.min_safety_margin));
+    legend('节点净距离', '各区间最小值（标于区间中点）', '要求的安全距离', ...
+        '碰撞边界', 'Location', 'best');
 end

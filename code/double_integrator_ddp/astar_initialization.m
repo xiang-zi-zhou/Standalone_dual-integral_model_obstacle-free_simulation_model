@@ -11,8 +11,9 @@ function [astar] = astar_initialization(cfg)
     resolution = cfg.world.resolution;
 
     map = binaryOccupancyMap(x_world, y_world, resolution);
-    % 生成障碍物(圆形)
-    obstacle3 = cfg.world.obstacle3; % 圆形障碍物，圆心为(15, 14)，半径为3米
+    % 生成障碍物(圆形)  
+    % 这里之后可能需要优化，目前只能识别单个圆形障碍物？
+    obstacle3 = cfg.task.obs; % 圆形障碍物，圆心为(15, 14)，半径为3米
     [X, Y] = meshgrid(0:1/resolution:x_world, 0:1/resolution:y_world);
     radius = obstacle3(3);
     mask = (X - obstacle3(1)).^2 + (Y - obstacle3(2)).^2 <= radius^2;
@@ -20,7 +21,7 @@ function [astar] = astar_initialization(cfg)
 
     % 膨胀障碍物：示例安全半径为0.5米
     occupiedOriginal = occupancyMatrix(map) > 0.5;
-    inflationRadius = 0.5; % 膨胀距离，单位m；同时用于图中说明
+    inflationRadius = cfg.task.obs_safe; % 与 DDP 使用相同的安全距离
     inflate(map, inflationRadius);
     occupiedInflated = occupancyMatrix(map) > 0.5;
     % 仅膨胀新增的区域

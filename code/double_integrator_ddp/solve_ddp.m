@@ -33,6 +33,9 @@ function sol = solve_ddp(x0, U_init, dynamics, stageCost, terminalCost, backward
     % sol.metrics.accel_violation
 
     solve_timer = tic;
+    assert(isequal(size(U_init), [2, cfg.model.N]) && ...
+           all(isfinite(U_init(:))) && numel(x0) == 4 && all(isfinite(x0(:))), ...
+           'DDP 输入无效：x0 必须为有限四维状态，U_init 必须为有限的 2×N 控制序列。');
     % 当前正则化重试使用乘十增长，因此初值必须严格为正。
     assert(cfg.solver.lambda_init > 0 && ...
            cfg.solver.lambda_min > 0 && ...
@@ -47,6 +50,8 @@ function sol = solve_ddp(x0, U_init, dynamics, stageCost, terminalCost, backward
 
     % 生成初始状态序列
     [X, totalCost, parts] = rollout(x0, U, dynamics, stageCost, terminalCost, cfg);
+    assert(all(isfinite(X(:))) && isfinite(totalCost), ...
+           '初始 rollout 产生非有限状态或代价，请检查初值、动力学和代价参数。');
 
     % 初始化
     status = 'max_iterations';
@@ -169,6 +174,11 @@ function metrics = compute_metrics(X, U, cfg)
                     'max_accel', max_accel, ...
                     'speed_violation', speed_violation, ...
                     'accel_violation', accel_violation);
+    avoidance = obstacle_metrics(X, U, cfg);
+    names = fieldnames(avoidance);
+    for j = 1:numel(names)
+        metrics.(names{j}) = avoidance.(names{j});
+    end
 end
 
 function print_summary(sol)
@@ -186,6 +196,14 @@ function print_summary(sol)
     fprintf('最大加速度：%.6f m/s^2；超限量：%.6f m/s^2\n', ...
             sol.metrics.max_accel, sol.metrics.accel_violation);
     fprintf('最终控制梯度无穷范数：%.3e\n', sol.metrics.control_gradient_inf);
+    fprintf('最小障碍净距离：%.6f m；发生时间：%.6f s\n', ...
+        sol.metrics.min_obstacle_clearance, sol.metrics.min_clearance_time);
+    fprintf('最小安全余量：%.6f m；安全距离违反量：%.6f m\n', ...
+        sol.metrics.min_safety_margin, sol.metrics.safety_violation);
+    fprintf('原始障碍碰撞/接触：%d；碰撞区间数：%d；安全距离不足区间数：%d\n', ...
+        sol.metrics.obstacle_collision, sol.metrics.collision_intervals, sol.metrics.unsafe_intervals);
+    fprintf('终端障碍净距离：%.6f m；终端避障代价：%.6g\n', ...
+        sol.metrics.terminal_clearance, sol.parts.terminal_obstacle);
     if strcmp(sol.status, 'success')
         fprintf('停止原因：相对代价变化达到阈值；约束与终端精度请按上述指标判断。\n');
     end

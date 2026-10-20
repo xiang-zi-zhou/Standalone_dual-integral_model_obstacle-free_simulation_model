@@ -8,11 +8,13 @@ stageCosts = zeros(1, N);
 speed_penalty = zeros(1, N);
 accel_penalty = zeros(1, N);
 control = zeros(1, N);
+obstacle = zeros(1, N);
 h = cfg.model.dt;
 
 for k = 1:N
 	u = U(:, k);
-	[l, cv, cu, l_control, ~, ~, ~, ~, ~] = stageCost(x, u, cfg);
+	[l, cv, cu, l_control, ~, ~, ~, ~, ~, co] = stageCost(x, u, cfg);
+    obstacle(k) = h * co;
 	stageCosts(k) = l;
 	speed_penalty(k) = h * cv; % 速度罚函数值
 	accel_penalty(k) = h * cu; % 加速度罚函数值
@@ -22,10 +24,11 @@ for k = 1:N
 	X(:, k + 1) = x;
 end
 
-[terminal, phi_pos, phi_vel, ~, ~] = terminalCost(x, cfg);
+[terminal, phi_pos, phi_vel, ~, ~, phi_obs] = terminalCost(x, cfg);
 stageTotal = sum(stageCosts);
 totalCost = stageTotal + terminal;
 parts = struct('terminal_position', phi_pos, ...
+               'terminal_obstacle', phi_obs, 'obstacle_penalty', obstacle, ...
                'terminal_velocity', phi_vel, ...
 			   'control', control, ...
 			   'speed_penalty', speed_penalty, ...
