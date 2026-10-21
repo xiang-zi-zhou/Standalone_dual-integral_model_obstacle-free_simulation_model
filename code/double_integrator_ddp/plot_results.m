@@ -22,19 +22,31 @@ function figs = plot_results(sol, cfg)
     speed = sqrt(sum(X(3:4, :).^2, 1));
     accel = sqrt(sum(U.^2, 1));
     goal = cfg.task.x_goal(:);
+    % 同时校验障碍物配置，并为距离图计算连续区间的最小净距离。
+    avoidance = obstacle_metrics(X, U, cfg);
+    obs = cfg.task.obs;
+    M = size(obs, 1);
 
     figs.trajectory = figure('Name', '双积分：轨迹与控制', 'Color', 'w', ...
         'Position', [50,50,1200,800]);
     subplot(2, 2, 1);
     hold on;
-    obs = cfg.task.obs(:);
     theta = linspace(0, 2*pi, 200);
     circle = [cos(theta); sin(theta)];
-    boundary = obs(1:2) + obs(3)*circle;
-    safe = obs(1:2) + (obs(3)+cfg.task.obs_safe)*circle;
-    hObs = fill(boundary(1,:), boundary(2,:), [0.35 0.35 0.35], ...
-        'EdgeColor', 'k');
-    hSafe = plot(safe(1,:), safe(2,:), '--', 'Color', [0.9 0.45 0], 'LineWidth', 1.2);
+    hObs = gobjects(M, 1);
+    hSafe = gobjects(M, 1);
+    for i = 1:M
+        center = obs(i, 1:2).';
+        boundary = center + obs(i, 3)*circle;
+        safe = center + (obs(i, 3)+cfg.task.obs_safe)*circle;
+        hObs(i) = fill(boundary(1,:), boundary(2,:), [0.35 0.35 0.35], ...
+            'EdgeColor', 'k');
+        hSafe(i) = plot(safe(1,:), safe(2,:), '--', ...
+            'Color', [0.9 0.45 0], 'LineWidth', 1.2);
+        text(center(1), center(2), sprintf('%d', i), ...
+            'Color', 'w', 'FontWeight', 'bold', ...
+            'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle');
+    end
     hPath = plot(X(1, :), X(2, :), 'b-', 'LineWidth', 1.5);
     hStart = plot(X(1, 1), X(2, 1), 'go', 'MarkerFaceColor', 'g');
     hEnd = plot(X(1, end), X(2, end), 'bs', 'MarkerFaceColor', 'b');
@@ -43,7 +55,7 @@ function figs = plot_results(sol, cfg)
     xlabel('p_x (m)'); ylabel('p_y (m)');
     title(sprintf('平面轨迹：终点位置误差 %.3g m', ...
         norm(X(1:2, end) - goal(1:2))));
-    legend([hPath,hStart,hEnd,hGoal,hObs,hSafe], ...
+    legend([hPath,hStart,hEnd,hGoal,hObs(1),hSafe(1)], ...
         {'优化轨迹', '起点', '实际终点', '目标位置', '原始障碍物', '安全边界'}, ...
         'Location', 'best');
 
@@ -119,17 +131,32 @@ function figs = plot_results(sol, cfg)
             'Units', 'normalized', 'HorizontalAlignment', 'center');
     end
 
-    avoidance = obstacle_metrics(X,U,cfg);
     figs.avoidance = figure('Name', '双积分：障碍距离', 'Color', 'w');
-    plot(tx, avoidance.node_clearance, 'b-', 'LineWidth', 1.3);
     hold on;
-    plot(tx(1:end-1)+dt/2, avoidance.interval_clearance, 'm.', 'MarkerSize', 8);
-    yline(cfg.task.obs_safe, '--', 'Color', [0.9 0.45 0], 'LineWidth', 1.2);
-    yline(0, 'k--');
+    colors = lines(M);
+    hIndividual = gobjects(M, 1);
+    labels = cell(1, M);
+    for i = 1:M
+        hIndividual(i) = plot(tx, avoidance.node_clearance_by_obstacle(i,:), ...
+            '-', 'Color', colors(i,:), 'LineWidth', 0.8);
+        labels{i} = sprintf('障碍物%d：节点净距离', i);
+    end
+    hNearest = plot(tx, avoidance.node_clearance, 'k-', 'LineWidth', 1.8);
+    hInterval = plot(tx(1:end-1)+dt/2, avoidance.interval_clearance, ...
+        'm.', 'MarkerSize', 8);
+    hRequired = yline(cfg.task.obs_safe, '--', ...
+        'Color', [0.9 0.45 0], 'LineWidth', 1.2);
+    hCollision = yline(0, 'k--');
+    hMinimum = plot(avoidance.min_clearance_time, ...
+        avoidance.min_obstacle_clearance, 'ro', 'MarkerFaceColor', 'r');
     grid on; xlim([0,tx(end)]);
-    xlabel('时间 (s)'); ylabel('中心到原始障碍边界的净距离 (m)');
-    title(sprintf('区间内最小净距离 %.4f m；最小安全余量 %.4f m', ...
-        avoidance.min_obstacle_clearance, avoidance.min_safety_margin));
-    legend('节点净距离', '各区间最小值（标于区间中点）', '要求的安全距离', ...
-        '碰撞边界', 'Location', 'best');
+    xlabel('时间 (s)'); ylabel('轨迹位置到原始障碍物边界的净距离 (m)');
+    title({sprintf('最小净距离 %.4f m；最小安全余量 %.4f m', ...
+        avoidance.min_obstacle_clearance, avoidance.min_safety_margin), ...
+        sprintf('对应障碍物%d，发生时刻 %.3f s', ...
+        avoidance.min_clearance_obstacle, avoidance.min_clearance_time)});
+    legend([hIndividual; hNearest; hInterval; hRequired; hCollision; hMinimum], ...
+        [labels, {'最近障碍物：节点净距离', '各区间最小值（标于区间中点）', ...
+        '要求的安全距离', '碰撞边界', '全局最小净距离（实际时刻）'}], ...
+        'Location', 'best');
 end

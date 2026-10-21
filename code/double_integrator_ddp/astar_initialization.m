@@ -11,13 +11,21 @@ function [astar] = astar_initialization(cfg)
     resolution = cfg.world.resolution;
 
     map = binaryOccupancyMap(x_world, y_world, resolution);
-    % 生成障碍物(圆形)  
-    % 这里之后可能需要优化，目前只能识别单个圆形障碍物？
-    obstacle3 = cfg.task.obs; % 圆形障碍物，圆心为(15, 14)，半径为3米
+
     [X, Y] = meshgrid(0:1/resolution:x_world, 0:1/resolution:y_world);
-    radius = obstacle3(3);
-    mask = (X - obstacle3(1)).^2 + (Y - obstacle3(2)).^2 <= radius^2;
-    setOccupancy(map, [X(mask), Y(mask)], 1); % 设置障碍物
+    % 生成障碍物(圆形)  
+    obs = cfg.task.obs; % 圆形障碍物
+    mask = false(size(X));
+
+    for i = 1:size(obs, 1)
+        cx = obs(i, 1);
+        cy = obs(i, 2);
+        radius = obs(i, 3);
+
+        mask = mask | ((X-cx).^2 + (Y-cy).^2 <= radius^2); %"|"表示取所有圆占据区域的并集
+    end
+
+    setOccupancy(map, [X(mask), Y(mask)], 1);
 
     % 膨胀障碍物：示例安全半径为0.5米
     occupiedOriginal = occupancyMatrix(map) > 0.5;
@@ -68,7 +76,7 @@ function [astar] = astar_initialization(cfg)
     astar.debugInfo = debugInfo;
     % 障碍物（用于画图）
     astar.map = map;
-    astar.obs.opt = obstacle3; % 圆形障碍物，圆心为(15, 14)，半径为3米
+    astar.obs.opt = obs; % 圆形障碍物，圆心为(15, 14)，半径为3米
     astar.obs.inflationOnly = inflationOnly; % 膨胀新增的障碍物区域
     astar.obs.inflationRadius = inflationRadius; % 膨胀半径
 end

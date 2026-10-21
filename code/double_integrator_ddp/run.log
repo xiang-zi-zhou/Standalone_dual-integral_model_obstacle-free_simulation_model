@@ -3,35 +3,446 @@
 要开始，请键入 doc。
 有关产品信息，请访问 www.mathworks.com。
  
-粗路径长度：44.42 m
-A*搜索耗时：0.060499 s（60.499 ms）
-A*探索节点数：3679
-Iteration 1: totalCost = 17.411034, alpha = 1.0000, lambda = 0.001000
-Iteration 2: totalCost = 9.016606, alpha = 1.0000, lambda = 0.000100
-Iteration 3: totalCost = 8.059548, alpha = 1.0000, lambda = 0.000010
-Iteration 4: totalCost = 6.781320, alpha = 1.0000, lambda = 0.000001
-Iteration 5: totalCost = 6.701785, alpha = 1.0000, lambda = 0.000001
-Iteration 6: totalCost = 6.700227, alpha = 1.0000, lambda = 0.000001
-Iteration 7: totalCost = 6.699679, alpha = 1.0000, lambda = 0.000001
-Iteration 8: totalCost = 6.699241, alpha = 1.0000, lambda = 0.000001
-Iteration 9: totalCost = 6.699241, alpha = 1.0000, lambda = 0.000001
+粗路径长度：50.71 m
+A*搜索耗时：0.118853 s（118.853 ms）
+A*探索节点数：8263
+Iteration 1: totalCost = 5836.782485, alpha = 1.0000, lambda = 0.001000
+Iteration 2: totalCost = 2951.018219, alpha = 1.0000, lambda = 0.000100
+Iteration 3: totalCost = 1956.105044, alpha = 0.5000, lambda = 0.000010
+Iteration 4: totalCost = 1495.696487, alpha = 0.2500, lambda = 0.000001
+Iteration 5: totalCost = 1118.808277, alpha = 0.5000, lambda = 0.000001
+Iteration 6: totalCost = 749.237852, alpha = 0.5000, lambda = 0.000001
+Iteration 7: totalCost = 470.496118, alpha = 0.5000, lambda = 0.000001
+Iteration 8: totalCost = 280.634284, alpha = 0.5000, lambda = 0.000001
+Iteration 9: totalCost = 221.591784, alpha = 1.0000, lambda = 0.000001
+Iteration 10: totalCost = 151.208178, alpha = 0.2500, lambda = 0.000001
+Iteration 11: totalCost = 89.701970, alpha = 0.5000, lambda = 0.000001
+Iteration 12: totalCost = 23.981404, alpha = 1.0000, lambda = 0.000001
+Iteration 13: totalCost = 2.396049, alpha = 1.0000, lambda = 0.000001
+Iteration 14: totalCost = 2.052859, alpha = 1.0000, lambda = 0.000001
+Iteration 15: totalCost = 1.092689, alpha = 0.5000, lambda = 0.000001
+Iteration 16: totalCost = 0.466129, alpha = 1.0000, lambda = 0.000001
+Iteration 17: totalCost = 0.420836, alpha = 0.5000, lambda = 0.000001
+Iteration 18: totalCost = 0.395216, alpha = 1.0000, lambda = 0.000001
+Iteration 19: totalCost = 0.381113, alpha = 0.5000, lambda = 0.000001
+Iteration 20: totalCost = 0.372017, alpha = 1.0000, lambda = 0.000001
+Iteration 21: totalCost = 0.370753, alpha = 0.2500, lambda = 0.000001
+Iteration 22: totalCost = 0.358652, alpha = 1.0000, lambda = 0.000001
+Iteration 23: totalCost = 0.355817, alpha = 0.5000, lambda = 0.000001
+Iteration 24: totalCost = 0.351096, alpha = 1.0000, lambda = 0.000001
+Iteration 25: totalCost = 0.349713, alpha = 0.2500, lambda = 0.000001
+Iteration 26: totalCost = 0.346582, alpha = 1.0000, lambda = 0.000001
+Iteration 27: totalCost = 0.346201, alpha = 0.2500, lambda = 0.000001
+Iteration 28: totalCost = 0.345538, alpha = 1.0000, lambda = 0.000001
+Iteration 29: totalCost = 0.345035, alpha = 0.5000, lambda = 0.000001
+Iteration 30: totalCost = 0.344421, alpha = 1.0000, lambda = 0.000001
+Iteration 31: totalCost = 0.344342, alpha = 1.0000, lambda = 0.000001
+Iteration 32: totalCost = 0.342331, alpha = 1.0000, lambda = 0.000001
+Iteration 33: totalCost = 0.338646, alpha = 1.0000, lambda = 0.000001
+Iteration 34: totalCost = 0.338105, alpha = 0.2500, lambda = 0.000001
+Iteration 35: totalCost = 0.337242, alpha = 1.0000, lambda = 0.000001
+Iteration 36: totalCost = 0.337081, alpha = 0.1250, lambda = 0.000001
+Iteration 37: totalCost = 0.336917, alpha = 0.5000, lambda = 0.000001
+Iteration 38: totalCost = 0.336701, alpha = 1.0000, lambda = 0.000001
+Iteration 39: totalCost = 0.334149, alpha = 1.0000, lambda = 0.000001
+Iteration 40: totalCost = 0.333858, alpha = 0.5000, lambda = 0.000001
+Iteration 41: totalCost = 0.333603, alpha = 1.0000, lambda = 0.000001
+Iteration 42: totalCost = 0.333565, alpha = 0.5000, lambda = 0.000001
+Iteration 43: totalCost = 0.333336, alpha = 1.0000, lambda = 0.000001
+Iteration 44: totalCost = 0.333258, alpha = 0.2500, lambda = 0.000001
+Iteration 45: totalCost = 0.330987, alpha = 1.0000, lambda = 0.000001
+Iteration 46: totalCost = 0.330874, alpha = 1.0000, lambda = 0.000001
+Iteration 47: totalCost = 0.328879, alpha = 1.0000, lambda = 0.000001
+Iteration 48: totalCost = 0.328630, alpha = 1.0000, lambda = 0.000001
+Iteration 49: totalCost = 0.328624, alpha = 0.2500, lambda = 0.000001
+Iteration 50: totalCost = 0.328501, alpha = 1.0000, lambda = 0.000001
+Iteration 51: totalCost = 0.328462, alpha = 0.2500, lambda = 0.000001
+Iteration 52: totalCost = 0.328402, alpha = 1.0000, lambda = 0.000001
+Iteration 53: totalCost = 0.328369, alpha = 0.5000, lambda = 0.000001
+Iteration 54: totalCost = 0.328323, alpha = 1.0000, lambda = 0.000001
+Iteration 55: totalCost = 0.328286, alpha = 1.0000, lambda = 0.000001
+Iteration 56: totalCost = 0.328247, alpha = 1.0000, lambda = 0.000001
+Iteration 57: totalCost = 0.328234, alpha = 1.0000, lambda = 0.000001
+Iteration 58: totalCost = 0.328184, alpha = 1.0000, lambda = 0.000001
+Iteration 59: totalCost = 0.328166, alpha = 0.2500, lambda = 0.000001
+Iteration 60: totalCost = 0.328142, alpha = 1.0000, lambda = 0.000001
+Iteration 61: totalCost = 0.328123, alpha = 1.0000, lambda = 0.000001
+Iteration 62: totalCost = 0.328103, alpha = 1.0000, lambda = 0.000001
+Iteration 63: totalCost = 0.328093, alpha = 1.0000, lambda = 0.000001
+Iteration 64: totalCost = 0.328075, alpha = 1.0000, lambda = 0.000001
+Iteration 65: totalCost = 0.328068, alpha = 0.5000, lambda = 0.000001
+Iteration 66: totalCost = 0.328056, alpha = 1.0000, lambda = 0.000001
+Iteration 67: totalCost = 0.328051, alpha = 0.5000, lambda = 0.000001
+Iteration 68: totalCost = 0.328043, alpha = 1.0000, lambda = 0.000001
+Iteration 69: totalCost = 0.328039, alpha = 0.5000, lambda = 0.000001
+Iteration 70: totalCost = 0.328035, alpha = 1.0000, lambda = 0.000001
+Iteration 71: totalCost = 0.328033, alpha = 1.0000, lambda = 0.000001
+Iteration 72: totalCost = 0.328029, alpha = 1.0000, lambda = 0.000001
+Iteration 73: totalCost = 0.327893, alpha = 1.0000, lambda = 0.000001
+Iteration 74: totalCost = 0.327858, alpha = 1.0000, lambda = 0.000001
+Iteration 75: totalCost = 0.327858, alpha = 1.0000, lambda = 0.000001
 
 ========== DDP 求解结果汇总 ==========
 退出状态：success
-外层迭代索引：9；接受更新次数：9
-终端位置：[29.995596, 29.998197] m
-终端速度：[0.032713, 0.020180] m/s
-终端位置误差：0.004759028 m
-终端速度误差：0.038436381 m/s
-总代价：6.69924118564
-求解时长：0.334552 s（不含绘图及本汇总打印）
-最大速度：5.043669 m/s；超限量：0.043669 m/s
-最大加速度：1.917868 m/s^2；超限量：0.000000 m/s^2
-最终控制梯度无穷范数：9.163e-10
-最小障碍净距离：0.443329 m；发生时间：5.868842 s
-最小安全余量：-0.056671 m；安全距离违反量：0.056671 m
-原始障碍碰撞/接触：0；碰撞区间数：0；安全距离不足区间数：6
-终端障碍净距离：18.927384 m；终端避障代价：0
+外层迭代索引：75；接受更新次数：75
+终端位置：[29.995435, 29.998872] m
+终端速度：[0.018619, 0.004608] m/s
+终端位置误差：0.004702030 m
+终端速度误差：0.019180208 m/s
+总代价：0.327857541673
+求解时长：1.931897 s（不含绘图及本汇总打印）
+最大速度：5.023487 m/s；超限量：0.023487 m/s
+最大加速度：2.002292 m/s^2；超限量：0.002292 m/s^2
+最终控制梯度无穷范数：2.407e-08
+最小障碍净距离：0.491724 m；发生时间：6.003171 s
+最小安全余量：-0.008276 m；安全距离违反量：0.008276 m
+原始障碍碰撞/接触：0；碰撞区间数：0；安全距离不足区间数：4
+终端障碍净距离：18.514758 m；终端避障代价：0
 停止原因：相对代价变化达到阈值；约束与终端精度请按上述指标判断。
+=====================================
+
+Iteration 1: totalCost = 311.700132, alpha = 1.0000, lambda = 0.001000
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-03.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-02.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 2: totalCost = 187.309025, alpha = 1.0000, lambda = 10.000000
+Iteration 3: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 3: totalCost = 170.925915, alpha = 1.0000, lambda = 10.000000
+Iteration 4: totalCost = 163.872913, alpha = 1.0000, lambda = 1.000000
+Iteration 5: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 5: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 5: totalCost = 162.669840, alpha = 1.0000, lambda = 10.000000
+Iteration 6: totalCost = 160.005130, alpha = 1.0000, lambda = 1.000000
+Iteration 7: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 7: totalCost = 158.176764, alpha = 1.0000, lambda = 1.000000
+Iteration 8: totalCost = 156.668281, alpha = 0.2500, lambda = 0.100000
+Iteration 9: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 9: totalCost = 156.137880, alpha = 0.1250, lambda = 0.100000
+Iteration 10: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 10: totalCost = 155.639988, alpha = 0.1250, lambda = 0.100000
+Iteration 11: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 11: totalCost = 155.412795, alpha = 0.1250, lambda = 0.100000
+Iteration 12: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 13: totalCost = 155.144119, alpha = 0.1250, lambda = 0.100000
+Iteration 14: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 15: totalCost = 155.010905, alpha = 0.1250, lambda = 0.100000
+Iteration 16: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 17: totalCost = 154.861171, alpha = 0.2500, lambda = 0.100000
+Iteration 18: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 19: totalCost = 154.756973, alpha = 0.2500, lambda = 0.100000
+Iteration 20: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 21: totalCost = 154.705393, alpha = 0.2500, lambda = 0.100000
+Iteration 22: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 23: totalCost = 154.373704, alpha = 0.5000, lambda = 0.100000
+Iteration 24: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 25: totalCost = 154.355784, alpha = 0.2500, lambda = 0.100000
+Iteration 26: totalCost = 154.111207, alpha = 0.1250, lambda = 0.010000
+Iteration 27: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 28: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 29: totalCost = 154.062468, alpha = 0.5000, lambda = 0.100000
+Iteration 30: totalCost = 153.773075, alpha = 0.2500, lambda = 0.010000
+Iteration 31: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 32: totalCost = 153.753122, alpha = 0.0625, lambda = 0.010000
+Iteration 33: totalCost = 153.591773, alpha = 0.2500, lambda = 0.001000
+Iteration 34: totalCost = 153.453629, alpha = 0.2500, lambda = 0.000100
+Iteration 35: totalCost = 153.432582, alpha = 0.1250, lambda = 0.000010
+Iteration 36: totalCost = 153.361479, alpha = 0.2500, lambda = 0.000001
+Iteration 37: totalCost = 153.351810, alpha = 0.0625, lambda = 0.000001
+Iteration 38: totalCost = 153.267244, alpha = 1.0000, lambda = 0.000001
+Iteration 39: totalCost = 153.266935, alpha = 1.0000, lambda = 0.000001
+Iteration 40: totalCost = 153.266904, alpha = 1.0000, lambda = 0.000001
+
+========== DDP 求解结果汇总 ==========
+退出状态：success
+外层迭代索引：40；接受更新次数：30
+终端位置：[29.999686, 29.999662] m
+终端速度：[0.001537, 0.001634] m/s
+终端位置误差：0.000460910 m
+终端速度误差：0.002243275 m/s
+总代价：153.266904327
+求解时长：1.253921 s（不含绘图及本汇总打印）
+最大速度：6.488193 m/s；超限量：1.488193 m/s
+最大加速度：2.010244 m/s^2；超限量：0.010244 m/s^2
+最终控制梯度无穷范数：3.692e-03
+最小障碍净距离：-0.325157 m；发生时间：6.599833 s
+最小安全余量：-0.825157 m；安全距离违反量：0.825157 m
+原始障碍碰撞/接触：1；碰撞区间数：10；安全距离不足区间数：16
+终端障碍净距离：18.518549 m；终端避障代价：0
+停止原因：相对代价变化达到阈值；约束与终端精度请按上述指标判断。
+=====================================
+
+粗路径长度：46.61 m
+A*搜索耗时：0.020450 s（20.450 ms）
+A*探索节点数：5138
+Iteration 1: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-02.
+Iteration 1: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 1: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 1: totalCost = 150.546344, alpha = 1.0000, lambda = 1.000000
+Iteration 2: totalCost = 116.918717, alpha = 1.0000, lambda = 0.100000
+Iteration 3: totalCost = 25.823327, alpha = 1.0000, lambda = 0.010000
+Iteration 4: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-02.
+Iteration 4: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 4: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 4: totalCost = 3.973368, alpha = 1.0000, lambda = 1.000000
+Iteration 5: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 5: totalCost = 0.605403, alpha = 1.0000, lambda = 1.000000
+Iteration 6: totalCost = 0.395641, alpha = 1.0000, lambda = 0.100000
+Iteration 7: totalCost = 0.280651, alpha = 1.0000, lambda = 0.010000
+Iteration 8: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 9: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 10: totalCost = 0.279312, alpha = 0.2500, lambda = 0.100000
+Iteration 11: totalCost = 0.262213, alpha = 1.0000, lambda = 0.010000
+Iteration 12: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 13: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 14: totalCost = 0.261890, alpha = 0.1250, lambda = 0.100000
+Iteration 15: totalCost = 0.248391, alpha = 1.0000, lambda = 0.010000
+Iteration 16: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 17: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 18: totalCost = 0.248272, alpha = 0.2500, lambda = 0.100000
+Iteration 19: totalCost = 0.236972, alpha = 1.0000, lambda = 0.010000
+Iteration 20: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 21: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 22: totalCost = 0.236858, alpha = 0.0625, lambda = 0.100000
+Iteration 23: totalCost = 0.227926, alpha = 1.0000, lambda = 0.010000
+Iteration 24: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 25: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 26: totalCost = 0.227899, alpha = 0.0625, lambda = 0.100000
+Iteration 27: totalCost = 0.220438, alpha = 1.0000, lambda = 0.010000
+Iteration 28: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 29: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 30: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 31: totalCost = 0.220360, alpha = 0.5000, lambda = 1.000000
+Iteration 32: totalCost = 0.219376, alpha = 1.0000, lambda = 0.100000
+Iteration 33: totalCost = 0.208856, alpha = 1.0000, lambda = 0.010000
+Iteration 34: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 35: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 36: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 37: totalCost = 0.208837, alpha = 0.2500, lambda = 1.000000
+Iteration 38: totalCost = 0.207807, alpha = 1.0000, lambda = 0.100000
+Iteration 39: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 40: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 41: totalCost = 0.207790, alpha = 0.2500, lambda = 1.000000
+Iteration 42: totalCost = 0.206807, alpha = 1.0000, lambda = 0.100000
+Iteration 43: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 44: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 45: totalCost = 0.206791, alpha = 0.2500, lambda = 1.000000
+Iteration 46: totalCost = 0.205857, alpha = 1.0000, lambda = 0.100000
+Iteration 47: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 48: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 49: totalCost = 0.205831, alpha = 0.2500, lambda = 1.000000
+Iteration 50: totalCost = 0.204917, alpha = 1.0000, lambda = 0.100000
+Iteration 51: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 52: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 53: totalCost = 0.204887, alpha = 0.2500, lambda = 1.000000
+Iteration 54: totalCost = 0.203966, alpha = 1.0000, lambda = 0.100000
+Iteration 55: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 56: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 57: totalCost = 0.203945, alpha = 0.2500, lambda = 1.000000
+Iteration 58: totalCost = 0.203030, alpha = 1.0000, lambda = 0.100000
+Iteration 59: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 60: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 61: totalCost = 0.203020, alpha = 0.2500, lambda = 1.000000
+Iteration 62: totalCost = 0.202136, alpha = 1.0000, lambda = 0.100000
+Iteration 63: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 64: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 65: totalCost = 0.202128, alpha = 0.2500, lambda = 1.000000
+Iteration 66: totalCost = 0.201288, alpha = 1.0000, lambda = 0.100000
+Iteration 67: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 68: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 69: totalCost = 0.201270, alpha = 0.2500, lambda = 1.000000
+Iteration 70: totalCost = 0.200455, alpha = 1.0000, lambda = 0.100000
+Iteration 71: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 72: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 73: totalCost = 0.200428, alpha = 0.2500, lambda = 1.000000
+Iteration 74: totalCost = 0.199598, alpha = 1.0000, lambda = 0.100000
+Iteration 75: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 76: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 77: totalCost = 0.199581, alpha = 0.2500, lambda = 1.000000
+Iteration 78: totalCost = 0.198747, alpha = 1.0000, lambda = 0.100000
+Iteration 79: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 80: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 81: totalCost = 0.198744, alpha = 0.2500, lambda = 1.000000
+Iteration 82: totalCost = 0.197944, alpha = 1.0000, lambda = 0.100000
+Iteration 83: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 84: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 85: totalCost = 0.197942, alpha = 0.2500, lambda = 1.000000
+Iteration 86: totalCost = 0.197191, alpha = 1.0000, lambda = 0.100000
+Iteration 87: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 88: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 89: totalCost = 0.197177, alpha = 0.2500, lambda = 1.000000
+Iteration 90: totalCost = 0.196388, alpha = 1.0000, lambda = 0.100000
+Iteration 91: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 92: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 93: totalCost = 0.196374, alpha = 0.1250, lambda = 1.000000
+Iteration 94: totalCost = 0.195643, alpha = 1.0000, lambda = 0.100000
+Iteration 95: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 96: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+Iteration 97: totalCost = 0.195630, alpha = 0.1250, lambda = 1.000000
+Iteration 98: totalCost = 0.194914, alpha = 1.0000, lambda = 0.100000
+Iteration 99: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 100: No alpha led to cost reduction. Increasing lambda to 1.000000 and retrying.
+
+========== DDP 求解结果汇总 ==========
+退出状态：max_iterations
+外层迭代索引：100；接受更新次数：52
+终端位置：[29.999984, 29.999793] m
+终端速度：[0.000945, 0.000173] m/s
+终端位置误差：0.000207719 m
+终端速度误差：0.000960540 m/s
+总代价：0.194913637095
+求解时长：2.577856 s（不含绘图及本汇总打印）
+最大速度：5.006305 m/s；超限量：0.006305 m/s
+最大加速度：2.000024 m/s^2；超限量：0.000024 m/s^2
+最终控制梯度无穷范数：7.332e-03
+最小障碍净距离：0.499427 m；发生时间：5.417453 s
+最小安全余量：-0.000573 m；安全距离违反量：0.000573 m
+原始障碍碰撞/接触：0；碰撞区间数：0；安全距离不足区间数：1
+终端障碍净距离：15.384618 m；终端避障代价：0
+=====================================
+
+Iteration 1: totalCost = 1382.184003, alpha = 1.0000, lambda = 0.001000
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-03.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-02.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+02.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+03.
+Iteration 2: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+04.
+Iteration 2: totalCost = 1344.867967, alpha = 1.0000, lambda = 10000.000000
+Iteration 3: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+04.
+Iteration 3: totalCost = 1305.345258, alpha = 1.0000, lambda = 10000.000000
+Iteration 4: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+04.
+Iteration 4: totalCost = 1263.639414, alpha = 1.0000, lambda = 10000.000000
+Iteration 5: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+04.
+Iteration 5: totalCost = 1220.510710, alpha = 1.0000, lambda = 10000.000000
+Iteration 6: totalCost = 926.819918, alpha = 0.5000, lambda = 1000.000000
+Iteration 7: totalCost = 224.516806, alpha = 1.0000, lambda = 100.000000
+Iteration 8: totalCost = 66.250853, alpha = 1.0000, lambda = 10.000000
+Iteration 9: totalCost = 60.849511, alpha = 0.2500, lambda = 1.000000
+Iteration 10: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 10: totalCost = 30.368519, alpha = 1.0000, lambda = 1.000000
+Iteration 11: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 11: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 11: totalCost = 28.372362, alpha = 1.0000, lambda = 10.000000
+Iteration 12: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 12: totalCost = 27.643153, alpha = 1.0000, lambda = 10.000000
+Iteration 13: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 13: totalCost = 27.214348, alpha = 1.0000, lambda = 10.000000
+Iteration 14: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 14: totalCost = 26.889534, alpha = 1.0000, lambda = 10.000000
+Iteration 15: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 15: totalCost = 26.623400, alpha = 1.0000, lambda = 10.000000
+Iteration 16: totalCost = 25.451065, alpha = 1.0000, lambda = 1.000000
+Iteration 17: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 17: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+01.
+Iteration 17: totalCost = 25.219480, alpha = 1.0000, lambda = 10.000000
+Iteration 18: totalCost = 24.567101, alpha = 1.0000, lambda = 1.000000
+Iteration 19: totalCost = 24.037510, alpha = 0.2500, lambda = 0.100000
+Iteration 20: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 20: totalCost = 23.981962, alpha = 0.2500, lambda = 0.100000
+Iteration 21: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 21: totalCost = 23.807871, alpha = 0.2500, lambda = 0.100000
+Iteration 22: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e-01.
+Iteration 22: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 22: totalCost = 23.000775, alpha = 1.0000, lambda = 1.000000
+Iteration 23: Backward pass failed (H = Q_uu + lambda*I 非正定，请增大 lambda 后重试). Retrying with lambda = 1.000e+00.
+Iteration 23: totalCost = 22.971010, alpha = 0.5000, lambda = 1.000000
+Iteration 24: totalCost = 22.934428, alpha = 0.2500, lambda = 0.100000
+Iteration 25: totalCost = 22.844985, alpha = 0.1250, lambda = 0.010000
+Iteration 26: totalCost = 22.776274, alpha = 0.0625, lambda = 0.001000
+Iteration 27: totalCost = 22.724614, alpha = 0.2500, lambda = 0.000100
+Iteration 28: totalCost = 22.681471, alpha = 0.0625, lambda = 0.000010
+Iteration 29: totalCost = 22.680247, alpha = 0.1250, lambda = 0.000001
+Iteration 30: totalCost = 22.611711, alpha = 0.1250, lambda = 0.000001
+Iteration 31: totalCost = 22.588600, alpha = 0.0625, lambda = 0.000001
+Iteration 32: No alpha led to cost reduction. Increasing lambda to 0.000010 and retrying.
+Iteration 33: No alpha led to cost reduction. Increasing lambda to 0.000100 and retrying.
+Iteration 34: No alpha led to cost reduction. Increasing lambda to 0.001000 and retrying.
+Iteration 35: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 36: totalCost = 22.569622, alpha = 0.0625, lambda = 0.010000
+Iteration 37: totalCost = 22.465925, alpha = 0.2500, lambda = 0.001000
+Iteration 38: totalCost = 22.348801, alpha = 0.5000, lambda = 0.000100
+Iteration 39: totalCost = 22.340126, alpha = 0.1250, lambda = 0.000010
+Iteration 40: totalCost = 22.305713, alpha = 0.5000, lambda = 0.000001
+Iteration 41: totalCost = 22.288933, alpha = 0.5000, lambda = 0.000001
+Iteration 42: totalCost = 22.285501, alpha = 0.1250, lambda = 0.000001
+Iteration 43: totalCost = 22.283862, alpha = 0.0625, lambda = 0.000001
+Iteration 44: totalCost = 22.273281, alpha = 0.5000, lambda = 0.000001
+Iteration 45: totalCost = 22.268859, alpha = 0.2500, lambda = 0.000001
+Iteration 46: totalCost = 22.267750, alpha = 0.0625, lambda = 0.000001
+Iteration 47: No alpha led to cost reduction. Increasing lambda to 0.000010 and retrying.
+Iteration 48: No alpha led to cost reduction. Increasing lambda to 0.000100 and retrying.
+Iteration 49: No alpha led to cost reduction. Increasing lambda to 0.001000 and retrying.
+Iteration 50: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 51: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 52: totalCost = 22.266624, alpha = 0.2500, lambda = 0.100000
+Iteration 53: totalCost = 22.260334, alpha = 0.5000, lambda = 0.010000
+Iteration 54: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 55: totalCost = 22.260049, alpha = 0.0625, lambda = 0.010000
+Iteration 56: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 57: totalCost = 22.258893, alpha = 0.1250, lambda = 0.010000
+Iteration 58: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 59: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 60: totalCost = 22.258168, alpha = 0.5000, lambda = 0.100000
+Iteration 61: totalCost = 22.257855, alpha = 0.1250, lambda = 0.010000
+Iteration 62: totalCost = 22.255941, alpha = 0.1250, lambda = 0.001000
+Iteration 63: totalCost = 22.254940, alpha = 0.1250, lambda = 0.000100
+Iteration 64: totalCost = 22.254102, alpha = 0.1250, lambda = 0.000010
+Iteration 65: totalCost = 22.251693, alpha = 0.2500, lambda = 0.000001
+Iteration 66: totalCost = 22.246751, alpha = 0.5000, lambda = 0.000001
+Iteration 67: totalCost = 22.244439, alpha = 0.5000, lambda = 0.000001
+Iteration 68: totalCost = 22.244020, alpha = 0.1250, lambda = 0.000001
+Iteration 69: No alpha led to cost reduction. Increasing lambda to 0.000010 and retrying.
+Iteration 70: No alpha led to cost reduction. Increasing lambda to 0.000100 and retrying.
+Iteration 71: No alpha led to cost reduction. Increasing lambda to 0.001000 and retrying.
+Iteration 72: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 73: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 74: totalCost = 22.243974, alpha = 1.0000, lambda = 0.100000
+Iteration 75: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 76: totalCost = 22.243490, alpha = 0.5000, lambda = 0.100000
+Iteration 77: totalCost = 22.243440, alpha = 0.0625, lambda = 0.010000
+Iteration 78: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 79: No alpha led to cost reduction. Increasing lambda to 0.100000 and retrying.
+Iteration 80: totalCost = 22.242507, alpha = 1.0000, lambda = 0.100000
+Iteration 81: totalCost = 22.242449, alpha = 0.0625, lambda = 0.010000
+Iteration 82: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 83: totalCost = 22.242297, alpha = 0.0625, lambda = 0.010000
+Iteration 84: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 85: totalCost = 22.242027, alpha = 0.1250, lambda = 0.010000
+Iteration 86: No alpha led to cost reduction. Increasing lambda to 0.010000 and retrying.
+Iteration 87: totalCost = 22.241708, alpha = 0.1250, lambda = 0.010000
+Iteration 88: totalCost = 22.241643, alpha = 0.0625, lambda = 0.001000
+Iteration 89: totalCost = 22.241382, alpha = 0.0625, lambda = 0.000100
+Iteration 90: totalCost = 22.241118, alpha = 0.1250, lambda = 0.000010
+Iteration 91: totalCost = 22.240735, alpha = 0.1250, lambda = 0.000001
+Iteration 92: totalCost = 22.240578, alpha = 0.5000, lambda = 0.000001
+Iteration 93: totalCost = 22.238928, alpha = 1.0000, lambda = 0.000001
+Iteration 94: totalCost = 22.238785, alpha = 1.0000, lambda = 0.000001
+Iteration 95: totalCost = 22.238106, alpha = 1.0000, lambda = 0.000001
+Iteration 96: totalCost = 22.237926, alpha = 0.2500, lambda = 0.000001
+Iteration 97: totalCost = 22.237613, alpha = 1.0000, lambda = 0.000001
+Iteration 98: totalCost = 22.237468, alpha = 0.5000, lambda = 0.000001
+Iteration 99: totalCost = 22.237189, alpha = 1.0000, lambda = 0.000001
+Iteration 100: totalCost = 22.237113, alpha = 0.5000, lambda = 0.000001
+
+========== DDP 求解结果汇总 ==========
+退出状态：max_iterations
+外层迭代索引：100；接受更新次数：76
+终端位置：[30.000014, 29.999778] m
+终端速度：[0.000305, 0.001137] m/s
+终端位置误差：0.000222888 m
+终端速度误差：0.001177284 m/s
+总代价：22.2371132333
+求解时长：2.781776 s（不含绘图及本汇总打印）
+最大速度：5.530852 m/s；超限量：0.530852 m/s
+最大加速度：2.004191 m/s^2；超限量：0.004191 m/s^2
+最终控制梯度无穷范数：7.760e-02
+最小障碍净距离：0.122856 m；发生时间：6.606109 s
+最小安全余量：-0.377144 m；安全距离违反量：0.377144 m
+原始障碍碰撞/接触：0；碰撞区间数：0；安全距离不足区间数：15
+终端障碍净距离：15.384629 m；终端避障代价：0
 =====================================
 
